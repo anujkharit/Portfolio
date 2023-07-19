@@ -1,0 +1,139 @@
+Assigment Group : Anuj Rajesh Kharit - 40228592 and Joyal Rakeshkumar Shah - 40226585
+
+
+
+Answer 1 : employee_name_with_given_company_name(X).
+X = anuj_kharit ;
+X = joyal_shah ;
+X = sanjay_dutt ;
+X = dixit_jain ;
+X = rahul_kumar ;
+X = hardik_mochi ;
+X = rakesh_thakar ;
+X = bhargav_suthar ;
+X = nirav_modi ;
+X = yatin_ladani ;
+X = maulesh_soni ;
+X = hitesh_purohit ;
+X = rohit_yagnik ;
+X = vishva_gandhi ;
+X = suresh_rana ;
+X = dev_rabari ;
+X = prakash_dhoni ;
+X = akshat_mehta ;
+X = rohit_sharma ;
+X = jasprit_bumrah ;
+X = katrina_kaif ;
+X = yash_vaghela ;
+X = saurav_shukla ;
+X = krunal_jani ;
+X = chintan_raval ;
+X = tilak_varma ;
+X = faf_duplesis ;
+X = jay_shah ;
+X = raj_jain ;
+X = kartik_aryan ;
+X = varun_dhavan ;
+X = saurav_ganguli ;
+X = samarth_mendpara ;
+X = maulesh_kanani ;
+X = madam_kama ;
+X = krishna_yadav ;
+X = dev_dutt ;
+X = rutvik_chudasama ;
+X = chetna_benarji.
+
+
+Answer 2 :  freelancer_employee_name_with_specialization(X,Z).
+X = sohil_chauhan,
+Z = java_developer ;
+X = rajesh_shah,
+Z = front_end_developer ;
+X = rohan_jain,
+Z = data_scientist ;
+X = banu_shah,
+Z = web_developer ;
+X = kangna_ranaut,
+Z = python_developer ;
+X = harsh_yadav,
+Z = senior_developer ;
+X = suraj_singh,
+Z = front_end_developer ;
+X = siddharth_malhotra,
+Z = full_stack_developer ;
+X = alka_suri,
+Z = react_developer ;
+X = dev_soni,
+Z = php_develoer ;
+X = sachin_tendulkar,
+Z = android_developer ;
+X = aamir_khan,
+Z = data_scientist ;
+X = meet_kantesariya,
+Z = etl_tester ;
+X = kl_rahul,
+Z = sql_head ;
+X = aashka_afridi,
+Z = registration_desk ;
+X = rajeshwari_desai,
+Z = javascript_expert ;
+X = nisha_vyas,
+Z = social_media ;
+X = pankaj_pujari,
+Z = quality_assurance ;
+X = punam_vyas,
+Z = database_engineer ;
+X = shardul_thakur,
+Z = software_developer_trainee ;
+X = khushal_panchal,
+Z = ai_expert ;
+X = john_wick,
+Z = software_developer_intern ;
+X = scarlet_johnson,
+Z = software_testing ;
+X = mahekraj_dave,
+Z = android_developer.
+
+Answer 3 :   freelancer_payrate_higher_than_given_amount(X) .
+X = jay_shah ;
+X = raj_jain ;
+X = sohil_chauhan ;
+X = rohan_jain ;
+X = banu_shah ;
+X = kangna_ranaut ;
+X = kartik_aryan ;
+X = harsh_yadav ;
+X = suraj_singh ;
+X = siddharth_malhotra ;
+X = varun_dhavan ;
+X = alka_suri ;
+X = dev_soni ;
+X = saurav_ganguli ;
+X = sachin_tendulkar ;
+X = aamir_khan ;
+X = samarth_mendpara ;
+X = meet_kantesariya ;
+X = maulesh_kanani ;
+X = kl_rahul ;
+X = aashka_afridi ;
+X = rajeshwari_desai ;
+X = nisha_vyas ;
+X = pankaj_pujari ;
+X = madam_kama ;
+X = punam_vyas ;
+X = krishna_yadav ;
+X = shardul_thakur ;
+X = dev_dutt ;
+X = khushal_panchal ;
+X = john_wick ;
+X = scarlet_johnson ;
+X = chetna_benarji ;
+X = mahekraj_dave.
+
+
+Answer 4 : 
+manager_name_and_salary_for_given_company_name(X,Y).
+X = rohan_soni,
+Y = 23.15.
+
+

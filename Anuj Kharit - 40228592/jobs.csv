@@ -1,0 +1,150 @@
+CREATE TABLE job(SIN varchar(15), payrate float , start_date date, duration varchar(20),foreign key (SIN) references person(SIN));
+CREATE TABLE employee (SIN varchar(15), start_date date , salary float, desgination varchar(15), foreign key (SIN) references person(SIN));
+CREATE TABLE freelancer (SIN varchar(15),specialization varchar(25) , foreign key (SIN) references person(SIN));
+CREATE TABLE company (company_name varchar(20),location varchar(25),SIN varchar(15),foreign key (SIN) references person(SIN));
+CREATE TABLE person( SIN varchar(15) primary key, Name varchar(50));
+SIN,payrate,start_date,duration
+523-641-147,45.35,17/04/2022,"4 Months"
+456-321-528,19.25,15/05/2022,"6 months"
+235-647-432,40.2,19/08/2022,"12 months"
+234-568-743,16.5,02/02/2021,"18 months"
+965-847-145,17.5,20/08/2022,"3 months"
+676-232-885,18.52,15/02/2022,"4 months"
+837-878-242,25.25,16/05/2022,"6 months"
+343-672-241,15.6,15/02/2021,"24 months"
+765-984-771,51.2,16/07/2022,"6 months"
+161-282-281,15.6,17/05/2022,"7 months"
+987-987-780,17.6,16/04/2022,"8 months"
+091-281-011,14.25,17/02/2022,"9 months"
+401-014-282,25.2,18/01/2021,"24 months"
+785-819-999,19.6,1805/2022,"6 months"
+843-321-454,23.2,12/07/2022,"8 months"
+875-675-100,22.6,14/07/2022,"9 months"
+556-118-291,15.6,15/07/2022,"10 months"
+877-888-876,17.6,17/06/2022,"11 months"
+383-873-341,16.25,11/04/2022,"12 months"
+656-676-453,19.6,11/01/2021,"24 months"
+SIN,start_date,salary,desgination
+985-484-756,0,15.25,manager
+516-856-741,0,24.15,"Full Stack Developer"
+741-258-254,0,14.25,"Database specialist"
+546-214-258,0,33.25,manager
+789-412-123,0,24.12,"Data Scientist"
+784-476-729,0,15.6,web_developer
+387-276-110,0,25.23,"AI Developer"
+821-957-382,0,19.6,"ETL Tester"
+836-854-366,0,17.65,"API Tester"
+847-554-191,0,26.23,"Frontend developer"
+405-483-697,0,15.3,"Backend Developer"
+846-992-173,0,17.89,"UI/UX Developer"
+147-279-484,0,32.02,"System Analyst"
+382-691-171,0,16.3,"Scrum Master"
+727-172-983,0,25.0,"Project Manager"
+821-281-281,0,24.0,"IT Business Analyst"
+827-288-111,0,24.0,"Software developer intern"
+215-365-987,0,40.2,"software tester"
+123-464-749,0,14.25,"Automation Tester"
+563-798-451,0,23.6,"Team Lead"
+SIN,specialization
+523-641-147,"Data Scientist"
+456-321-528,"Software Engineer"
+235-647-432,"Full Stack Developer"
+234-568-743,"UI/UX desginer"
+965-847-145,"Database specialist"
+676-232-885,"Project manager"
+837-878-242,"Sr. project manager"
+343-672-241,"IT Business Analyst"
+765-984-771,"Scrum Master"
+161-282-281,"Agile Coach"
+987-987-780,"Software Tester"
+091-281-011,"ETL Tester"
+401-014-282,"API Tester"
+785-819-999,"UI/UX Desginer"
+843-321-454,"Web Desginer"
+875-675-100,"IT Consultant"
+556-118-291,"Python Developer"
+877-888-876,"Java Developer"
+383-873-341,"C++ Developer"
+656-676-453,"Android Developer"
+company_name,location,SIN
+TCS,Montreal,985-484-756
+Wipro,Montreal,516-856-741
+TCS,Remote,741-258-254
+Wipro,Toronto,546-214-258
+TCS,Ottawa,789-412-123
+Wipro,Toronto,523-641-147
+TCS,Hybrid,456-321-528
+Wipro,Toronto,235-647-432
+TCS,Remote,234-568-743
+Wipro,Hybrid,965-847-145
+TCS,Hybrid,784-476-729
+Wipro,Hybrid,387-276-110
+TCS,Remote,821-957-382
+TCS,Montreal,836-854-366
+Wipro,Toronto,847-554-191
+TCS,Montreal,405-483-697
+Wipro,Hybrid,846-992-173
+TCS,Montreal,147-279-484
+TCS,Hybrid,382-691-171
+Wipro,Montreal,727-172-983
+TCS,Toronto,821-281-281
+Wipro,Montreal,827-288-111
+TCS,Montreal,215-365-987
+Wipro,Toronto,123-464-749
+TCS,Toronto,563-798-451
+Wipro,Montreal,676-232-885
+TCS,Hybrid,837-878-242
+Wipro,Montreal,343-672-241
+TCS,Hybrid,765-984-771
+Wipro,Toronto,161-282-281
+Wipro,Hybrid,987-987-780
+TCS,Montreal,091-281-011
+TCS,Montreal,401-014-282
+Wipro,Hybrid,785-819-999
+TCS,Hybrid,843-321-454
+Wipro,Montreal,875-675-100
+TCS,Remote,556-118-291
+Wipro,Remote,877-888-876
+TCS,Hybrid,383-873-341
+Wipro,Montreal,656-676-453
+SIN,Name
+985-484-756,"Anuj kharit"
+516-856-741,"Joyal shah"
+741-258-254,"Jay jain"
+546-214-258,"Akshay Kumar"
+789-412-123,"sanjay Dutt"
+523-641-147,"madhuri dixit"
+456-321-528,"Salaman Khan"
+235-647-432,"Yashpal Chauhan"
+234-568-743,"Dixit Jain"
+965-847-145,"banu shah"
+784-476-729,"bhargav suthar"
+387-276-110,"nirav modi"
+821-957-382,"maulik patel"
+836-854-366,"yatin ladani"
+847-554-191,"maulesh soni"
+405-483-697,"hitesh purohit"
+846-992-173,"kanaiyalal trivedi"
+147-279-484,"shivani vakil"
+382-691-171,"rohit yagnik"
+727-172-983,"vishva gandhi"
+821-281-281,"suresh rana"
+827-288-111,"anushka verma"
+215-365-987,"dev shah"
+123-464-749,raam_oza
+563-798-451,prakash_dhoni
+676-232-885,akshat_mehta
+837-878-242,"virat kholi"
+343-672-241,"rohit sharma"
+765-984-771,jasprit_bumrah
+161-282-281,"hardik pandya"
+987-987-780,katrina_kaif
+091-281-011,yash_vaghela
+401-014-282,saurav_shukla
+785-819-999,parthiv_tivari
+843-321-454,krunal_jani
+875-675-100,chintan_raval
+556-118-291,dhara_desai
+877-888-876,tilak_varma
+383-873-341,faf_duplesis
+656-676-453,abhishek_ramanandi

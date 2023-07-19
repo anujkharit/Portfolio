@@ -1,0 +1,209 @@
+package com.zaneacademy.aopdemo;
+
+public class AOPDemo {
+
+	public static void main(String[] args) {
+		AOPDemo aop=new AOPDemo();
+		aop.method1(0);
+		aop.method1(0,"Anuj");
+		aop.method2("Hello world");
+	}
+	public void method1(int number)
+	{
+		System.out.println("Executing method1(int) code here");
+	}
+	public void method1(int number,String value)
+	{
+		System.out.println("Executing method1(int) code here");
+	}
+	public void method2(String value)
+	{
+		System.out.println("Executing method2(String) code here");
+	}
+}
+
+
+aspect : 
+package com.zaneacademy.aopdemo;
+
+public aspect DemoAspect {
+	pointcut callDemoAspectPointcut() : 
+		call(void com.zaneacademy.AOPDemo.method1(*));
+	after() : callDemoAspectPointcut()
+	{
+		System.out.println("after");
+	}
+
+}
+
+
+
+DOT file : 
+
+
+import java.lang.Thread;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+public aspect Instrumentator {
+DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+Date date = new Date();
+private int n = 0;
+// Before the main function...
+try {
+Thread.sleep(10);
+7
+} catch(InterruptedException e) {
+System.out.println("InterruptedException caught");
+}
+try {
+PrintWriter out = new PrintWriter(new FileWriter("callgraph.dot", true));
+out.println(
+"/*\n" +
+" * Description: This is an automatically generated .DOT file\n" +
+" * representing a call graph.\n" +
+" * Author: ...\n" +
+" * Date: " + ... + "\n" +
+" *\n" +
+" */\n" +
+"digraph call-graph {\n" +
+" node [shape = oval];");
+out.close();
+} catch (IOException e) {}
+}
+// pointcut goes here
+// advice header
+try {
+Thread.sleep(10);
+} catch(InterruptedException e) {
+System.out.println("InterruptedException caught");
+}
+try {
+PrintWriter out = new PrintWriter(new FileWriter("callgraph.dot", true));
+out.println(
+" " +
+// get the caller
+8
+... +
+" -> " +
+// get the receiver
+.. +
+// get the message sent
+"[ label = \"" + ++n + ". " +
+.. +
+"\" ];" );
+out.close();
+} catch (IOException e) {}
+}
+// Now that the main method is done...
+try {
+Thread.sleep(10);
+} catch(InterruptedException e) {
+System.out.println("InterruptedException caught");
+}
+try {
+PrintWriter out = new PrintWriter(new FileWriter("callgraph.dot", true));
+out.println("}");
+out.close();
+} catch (IOException e) {}
+}
+}
+
+
+
+
+
+LOGGERSSS:
+
+package figures;
+
+
+import java.lang.Thread;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+
+public aspect logger {
+    String s="@startuml\n";
+
+before(): execution(public static void Driver.momSessionone())
+{
+
+    s=s+"activate User\n";
+}
+    before(): execution(public static void Driver.momSessionone())
+{
+
+    s=s+"deactivate User\n";
+}
+
+before(): execution(public int Bank.getBalance())
+{
+
+    s=s+"activate Shop\n";
+}
+after(): execution(public int Bank.getBalance())
+{
+    s=s+"deactivate Shop\n";
+}
+
+before(): execution(public int Wallet.getBalance())
+{
+    s=s+"activate Bank\n";
+}
+after(): execution(public int Wallet.getBalance())
+{
+    s=s+"deactivate Bank \n";
+}
+before(): execution(public static void Driver.momGetBankBalance(*))
+{
+    s=s+"User -> Shop: Searching for product "+thisJoinPoint.getSignature().getName()+"()\n";
+}
+after(): execution(public static void Driver.momGetBankBalance(*))
+{
+    s=s+"Shop --> User: Result of searched product "+thisJoinPoint.getSignature().getName()+"()\n";
+}
+// before(): execution(public static void Driver.momAddMoney(*))
+// {
+//     s=s+"User -> Bank: Request "+thisJoinPoint.getSignature().getName()+"()\n";
+// }
+after(): execution(public static void Driver.momAddMoney(*))
+{
+    s=s+"Bank --> User: Response Transaction Recipt "+thisJoinPoint.getSignature().getName()+"()\n";
+}
+before(): execution(public static boolean Driver.addMoney(*)){
+    s=s+"activate Bank\n Bank --> Shop: Confirmation of payment "+thisJoinPoint.getSignature().getName()+"()\n";
+}
+// after(): execution(public static boolean Driver.addMoney(*))
+// {
+//     s=s+"Bank --> Wallet: responce to Transfer Money "+thisJoinPoint.getSignature().getName()+"()\n";
+// }
+before(): execution( public static void Driver.momGetWalletBalance(*))
+{
+    s=s+"User -> Wallet: Request for payment "+thisJoinPoint.getSignature().getName()+"()\n";
+}
+after(): execution( public static void Driver.momGetWalletBalance(*))
+{
+    s=s+"Wallet --> User: Responce of payment confirmation "+thisJoinPoint.getSignature().getName()+"()\n";
+}
+
+
+after(): execution(public static void Driver.main(String[] ))
+{
+    s=s+"@enduml\n";
+    System.out.println(s);
+    try {
+				Thread.sleep(10);
+			} catch(InterruptedException e) {
+				System.out.println("InterruptedException caught");
+			}
+			try {
+				PrintWriter out = new PrintWriter(new FileWriter("uml.txt", true));
+				out.println(s);
+				out.close();
+			} catch (IOException e) {
+			}
+}
+
+}
+

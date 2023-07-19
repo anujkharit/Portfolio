@@ -1,0 +1,44 @@
+Question 1 (Anuj) :
+
+Sandia Medical Devices (SDM)  and New Mexico Health Systems (NMHS) are the stakeholder because Real-Time Glucose Monitoring (RTGM) devices are made by partnership of SDM and NHMS.
+
+There are some other stakeholder which will impact to the Real-Time Glucose Monitoring (RTGM) device :
+
+ -  Internal : Sandia Medical Devices (SDM)  and New Mexico Health Systems (NMHS) are  the internal stakeholders because they are the one who have interest in successful implementation of this device.
+ - External : Patients and Medical professionals are the external stakeholders.
+ - Opertional :  New Mexico Health Systems (NMHS), patients and other health systems worldwide are the operational stakeholders.
+ - Executive : shareholders, Insurance company , health industry, Public health and regulatory agencies are the executive stakeholders.
+
+ New Mexico Health Systems (NMHS) patients should  be included in defining the system requirements. New Mexico Health Systems (NMHS) throughout the mexico and having number of patients which will help to minimize cost and easily available patients to conduct the research and  trials of the software prototype.
+
+Health sector plays a high value to society. It can provide various important information
+about the risk factor , treatment , disease , patterns of care and cost. Real-Time Glucose Monitoring (RTGM) devices should interact with medical professionals other than physicians because it allows detailed study and provides solutions for disease with round set skills of medical professionals. 
+
+Medical professionals have knowledge and experience of the cause and treatment of illness which will help to make RTGM an accurate device.
+
+Question 2 (Anuj) : 
+
+If I were the lead analyst , I would describe the requirement based on following :
+
+  1. Preparing for an interview (Before,During,After).
+  2. Keeping open list items which includes issue , responsible person , user contact, comments,
+identified date and end date.
+  3. Distribute and collect questionnaires which helps to understand the problem and provide a                                      better solution.
+   4. Research vendor solutions : It allows us to find the solutions that are already implemented for   the problem.
+   5. Collect active user comments and suggestions : By taking continuous feedback for users will help to enhance the system.
+   6. UML Models : Use case, activity diagram and many more.
+   7. Functional and Nonfunctional Requirement
+   8 .BRD - which contains the detailed information regarding the project.
+   9. By prioritize requirement
+  10. Develops user interface dialogs suchs mockups and wireframe so that it will help to understand process flow.
+  11. Evaluation requirement with users
+  12. By writing and explaining user stories.
+
+Questions I as lead analyst  need to be answered : 
+  a)About the vision of the project 
+  b)solution for the problem
+  c)who is the end user
+  d)Project cost
+  e)Process flow of the business
+  f)Business architecture.
+

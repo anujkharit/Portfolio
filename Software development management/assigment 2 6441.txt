@@ -1,0 +1,121 @@
+Assigment 2 : 
+Practical 1 (defun swap (lt)
+  (cond ((null lt) '())
+    ((null (cdr lt)) (cons (car lt) nil)) 
+    ((cons (car (cdr lt)) (cons (car lt) (swap (cdr (cdr lt))))))
+  )
+)
+
+(print (swap '(1 (2 3) 4)))
+(print (swap '(1 "two" -3 "four")))
+(print (swap '(a (b))))
+(print (swap '(a)))
+(print (swap '()))
+
+
+
+
+
+prac - 2
+(defun compress (list)
+	(cond
+		((null list) nil)
+		((null (cdr list)) list)
+		((eql (car list) (car (cdr list)))
+		(compress (cdr list)))
+	(t (cons (car list) (compress (cdr list))))
+	)
+)
+
+(print (compress '(a a a a b c c d e e e e a a a)))
+
+Prac - 3 
+(defun pairs (lst1 lst2)
+	(cond ((null lst1) nil)
+	((null lst2) nil)
+	((/= (length lst1) (length lst2)) nil)
+	(t(cons (list (car lst1) (car lst2)) (pairs (cdr lst1)(cdr lst2))))
+	)
+)
+(write (pairs '(a b c) '(x y z)))
+
+Sucess & Failure : 
+Output :(write (pairs '(a b c) '(x y z))) ->
+ ((A X) (B Y) (C Z))
+
+------------------------------------------
+practical - 4
+(defun dist (ele lst1)
+	(cond ((null lst1) nil)
+	(t(cons (list ele (car lst1)) (dist ele (cdr lst1))))
+	)
+)
+
+(write (dist 'a '(x y z)))
+
+Output : dist(a, <b, c, d> ) = < <a, b>, <a, c>, <a, d>> -->> ((A X) (A Y) (A Z))
+
+----------------------------------------------
+
+
+Prac - 5
+
+(defun diff (lst1 lst2)
+  (cond
+       ((not (and (listp lst1) (listp lst2))) nil) 		;To check whether list1 and list2 are list or not
+       ((or (null lst1) (null lst2)) nil) 			;To check whether list1 and list2 are null or not
+       ((not (= (length lst1) (length lst2))) nil) 		;To check whether lenght of list1 and list2 are equal or not
+
+       ;; Otherwise
+       (t (let
+         ((d (- (car lst1) (car lst2)))) 			;Take list1 and list2 head difference and store it in variable "d"
+         (cons (* d d d) (diff (cdr lst1) (cdr lst2)))))))
+
+Output : 
+
+ (print(diff '3 '(5 1 -4))) --> NIL
+(print(diff '() '(3 4))) -->NIL
+(print(diff '(5 7) '(1 3 7 9))) --> NIL
+(diff ’(3 5 -2) ’(5 1 -4)) -->> (-8 64 8)
+
+----------------------------------------------------------------------------------------------------------------------
+Practical - 6 
+(defun flatten (list)
+  "Returns a fresh list containing the leaf elements of LIST."
+  (cond ((atom list) nil)
+  (if (listp list)
+      (mapcan 'flatten list)
+      (list list))))
+
+;; CL-USER> (flatten '(1 2 (3 4) 5 ((6))))
+;; (1 2 3 4 5 6)
+
+(defun to-set (list)
+  "Returns a set based on the elements of LIST.  The result
+is a flat list containing the leaf elements of LIST, but
+with any duplicate elements removed."
+  (delete-duplicates (flatten list)))
+
+;; CL-USER> (to-set '(1 3 (3 4) ((4) 5)))
+;; (1 3 4 5)
+(print(to-set '3))
+----------------------------------------------------------------------------------------------
+prac - 7
+
+(defun filter (lst num)
+	(cond 	( 
+		(or (not (listp lst) ) 				;Check whether the first args is list or not, return NIL if it is not list
+		    ( null lst ) 				;Return NIL if list is empty or null
+		    (not (atom num) )				;Return NIL if second args is not an element
+		    (not(and (plusp num) (integerp num)) ) 	;Check whether the element is a integer greater than 0, if not return NIL
+                )nil
+	      	)
+		(t
+ 		(if(> (car lst) num) 				;Check if head of the list is greater than the element
+                    ( cons (car lst)  (filter (cdr lst) num ) )	;Add head of the list to new list and call recursively on tail of the list
+		    (filter (cdr lst) num )			;Recursive call on tail of the list
+		)
+		)
+	)
+)   
+

@@ -1,0 +1,224 @@
+person : 
+985-484-756	,'Anuj kharit')
+(516-856-741,'Joyal shah')
+(741-258-254,'Jay jain')
+(546-214-258,'Akshay Kumar')
+(789-412-123,'sanjay Dutt')
+(523-641-147,'madhuri dixit')
+(456-321-528,'Salaman Khan')
+(235-647-432,'Yashpal Chauhan')
+(234-568-743,'Dixit Jain')
+(965-847-145,'banu  shah')
+
+insert into person (SIN, Name) values ('985-484-756','Anuj kharit'),
+('516-856-741','Joyal shah'),
+('741-258-254','Jay jain'),
+('546-214-258','Akshay Kumar'),
+('789-412-123','sanjay Dutt'),
+('523-641-147','madhuri dixit'),
+('456-321-528','Salaman Khan'),
+('235-647-432','Yashpal Chauhan'),
+('234-568-743','Dixit Jain'),
+('965-847-145','banu  shah'),
+('784-476-729','bhargav suthar'),
+('387-276-110','nirav modi'),
+('821-957-382','maulik patel'),
+('836-854-366','yatin ladani'),
+('847-554-191','maulesh soni'),
+('405-483-697','hitesh purohit'),
+('846-992-173','kanaiyalal trivedi'),
+('147-279-484','shivani vakil'),
+('382-691-171','rohit yagnik'),
+('727-172-983','vishva gandhi'),
+('821-281-281','suresh rana'),
+('827-288-111','anushka verma'),
+('215-365-987','dev shah'),
+('123-464-749','raam oza'),
+('563-798-451','prakash dhoni'),
+('676-232-885','akshat mehta'),
+('837-878-242','virat kholi'),
+('343-672-241','rohit sharma'),
+('765-984-771','jasprit bumrah'),
+('161-282-281','hardik pandya'),
+('987-987-780','katrina kaif'),
+('091-281-011','yash vaghela'),
+('401-014-282','saurav shukla'),
+('785-819-999','parthiv tivari'),
+('843-321-454','krunal jani'),
+('875-675-100','chintan raval'),
+('556-118-291','dhara desai'),
+('877-888-876','tilak varma'),
+('383-873-341','faf duplesis'),
+('656-676-453','abhishek ramanandi');
+
+
+
+Empoyee: 
+(985-484-756,14/05/2022,15.25,'manager'),
+(516-856-741,15/06/2022,24.15,'Full Stack Developer),
+(741-258-254,22/03/2021,14.25,'Database specialist),
+(546-214-258,01/02/2022,33.25,'manager),
+(789-412-123,03/09/2021,24.12,'Data Scientist);
+
+
+
+insert into employee (SIN, start_date, salary, desgination) values 
+('985-484-756',14/05/2022,15.25,'manager'),
+('516-856-741',15/06/2022,24.15,'Full Stack Developer'),
+('741-258-254',22/03/2021,14.25,'Database specialist'),
+('546-214-258',01/02/2022,33.25,'manager'),
+('789-412-123',03/09/2021,24.12,'Data Scientist'),
+('784-476-729',01/02/2021,15.60,'web_developer'),
+('387-276-110',06/05/2022,25.23,'AI Developer'),
+('821-957-382',23/02/2021,19.60,'ETL Tester'),
+('836-854-366',14/01/2021,17.65,'API Tester'),
+('847-554-191',23/09/2021,26.23,'Frontend developer'),
+('405-483-697',18/07/2021,15.30,'Backend Developer'),
+('846-992-173',14/05/2022,17.89,'UI/UX Developer'),
+('147-279-484',30/02/2021,32.02,'System Analyst'),
+('382-691-171',13/02/2022,16.30,'Scrum Master'),
+('727-172-983',01/02/2022,25.00,'Project Manager'),
+('821-281-281',03/05/2022,24.00,'IT Business Analyst'),
+('827-288-111',04/06/2022,24.00,'Software developer intern'),
+('215-365-987',15/07/2022,40.20,'software tester'),
+('123-464-749',14/07/2022,14.25,'Automation Tester'),
+('563-798-451',16/03/2021,23.60,'Team Lead');
+
+
+freelancer	
+SIN	Specilization
+(523-641-147,'Data Scientist'),
+(456-321-528,'Software Engineer'),
+(235-647-432,'Full Stack Developer'),
+(234-568-743,'UI/UX desginer'),
+(965-847-145,'Database specialist');
+
+insert into freelancer (SIN, specialization) values 
+('523-641-147','Data Scientist'),
+('456-321-528','Software Engineer'),
+('235-647-432','Full Stack Developer'),
+('234-568-743','UI/UX desginer'),
+('965-847-145','Database specialist'),
+('676-232-885','Project manager'),
+('837-878-242','Sr. project manager'),
+('343-672-241','IT Business Analyst'),
+('765-984-771','Scrum Master'),
+('161-282-281','Agile Coach'),
+('987-987-780','Software Tester'),
+('091-281-011','ETL Tester'),
+('401-014-282','API Tester'),
+('785-819-999','UI/UX Desginer'),
+('843-321-454','Web Desginer'),
+('875-675-100','IT Consultant'),
+('556-118-291','Python Developer'),
+('877-888-876','Java Developer'),
+('383-873-341','C++ Developer'),
+('656-676-453','Android Developer');
+
+
+company		
+Name	Location	sin
+('TCS','Montreal',985-484-756),
+('Wipro','Montreal',516-856-741),
+('TCS','Remote',741-258-254),
+('Wipro','Toronto',546-214-258),
+('TCS','Ottawa',789-412-123),
+('Wipro','Toronto',523-641-147),
+('TCS','Hybrid',456-321-528),
+('Wipro','Toronto',235-647-432),
+('TCS','Remote',234-568-743),
+('Wipro','Hybrid',965-847-145);
+
+
+insert into company (company_name,Location, SIN) values 
+('TCS','Montreal','985-484-756'),
+('Wipro','Montreal','516-856-741'),
+('TCS','Remote','741-258-254'),
+('Wipro','Toronto','546-214-258'),
+('TCS','Ottawa','789-412-123'),
+('Wipro','Toronto','523-641-147'),
+('TCS','Hybrid','456-321-528'),
+('Wipro','Toronto','235-647-432'),
+('TCS','Remote','234-568-743'),
+('Wipro','Hybrid','965-847-145'),
+('TCS','Hybrid','784-476-729'),
+('Wipro','Hybrid','387-276-110'),
+
+('TCS','Remote','821-957-382'),
+('TCS','Montreal','836-854-366'),
+('Wipro','Toronto','847-554-191'),
+('TCS','Montreal','405-483-697'),
+('Wipro','Hybrid','846-992-173'),
+('TCS','Montreal','147-279-484'),
+('TCS','Hybrid','382-691-171'),
+('Wipro','Montreal','727-172-983'),
+('TCS','Toronto','821-281-281'),
+('Wipro','Montreal','827-288-111'),
+('TCS','Montreal','215-365-987'),
+('Wipro','Toronto','123-464-749'),
+('TCS','Toronto','563-798-451'),
+('Wipro','Montreal','676-232-885'),
+
+('TCS','Hybrid','837-878-242'),
+('Wipro','Montreal','343-672-241'),
+('TCS','Hybrid','765-984-771'),
+('Wipro','Toronto','161-282-281'),
+('Wipro','Hybrid','987-987-780'),
+('TCS','Montreal','091-281-011'),
+('TCS','Montreal','401-014-282'),
+('Wipro','Hybrid','785-819-999'),
+('TCS','Hybrid','843-321-454'),
+('Wipro','Montreal','875-675-100'),
+('TCS','Remote','556-118-291'),
+('Wipro','Remote','877-888-876'),
+('TCS','Hybrid','383-873-341'),
+('Wipro','Montreal','656-676-453');
+
+
+
+
+
+job	- freelancer		
+sin	payrate	startDate	duration
+(523-641-147,45.35,17/04/2022,'4 Months'),
+(456-321-528,19.25,15/05/2022,'6 months'),
+(235-647-432,40.2,19/08/2022,'12 months'),
+(234-568-743,16.5,02/02/2021,'18 months'),
+(965-847-145,17.5,20/08/2022,'3 months');
+
+
+insert into job (SIN, payrate, start_date, duration) values 
+('523-641-147',45.35,'17/04/2022','4 Months');
+('456-321-528',19.25,'15/05/2022','6 months'),
+('235-647-432',40.2,'19/08/2022','12 months'),
+('234-568-743',16.5,'02/02/2021','18 months'),
+('965-847-145',17.5,'20/08/2022','3 months'),
+('676-232-885',18.52,'15/02/2022','4 months'),
+('837-878-242',25.25,'16/05/2022','6 months'),
+('343-672-241',15.60,'15/02/2021','24 months'),
+('765-984-771',51.20,'16/07/2022', '6 months'),
+('161-282-281',15.60,'17/05/2022', '7 months'),
+('987-987-780',17.60,'16/04/2022', '8 months'),
+('091-281-011',14.25,'17/02/2022', '9 months'),
+('401-014-282',25.20,'18/01/2021','24 months'),
+('785-819-999',19.60,'1805/2022','6 months'),
+('843-321-454',23.20,'12/07/2022','8 months'),
+('875-675-100',22.60,'14/07/2022','9 months'),
+('556-118-291',15.60,'15/07/2022','10 months'),
+('877-888-876',17.60,'17/06/2022','11 months'),
+('383-873-341',16.25,'11/04/2022','12 months'),
+('656-676-453',19.60,'11/01/2021','24 months');
+
+
+
+
+
+tables creation : 
+
+CREATE TABLE person( SIN varchar(15) primary key, Name varchar(20));
+CREATE TABLE job(SIN varchar(15), payrate float , start_date date, duration varchar(20),foreign key (SIN) references person(SIN));
+CREATE TABLE employee (SIN varchar(15), start_date date , salary float, desgination varchar(15), foreign key (SIN) references person(SIN));
+CREATE TABLE freelancer (SIN varchar(15),specialization varchar(25) , foreign key (SIN) references person(SIN));
+CREATE TABLE company (company_name varchar(20),location varchar(25),SIN varchar(15),foreign key (SIN) references person(SIN));
+
+

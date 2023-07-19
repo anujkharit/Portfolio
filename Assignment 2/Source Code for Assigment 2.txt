@@ -1,0 +1,95 @@
+Assigment -2 
+
+Assigment Group : Anuj Rajesh Kharit - 40228592 and Joyal Rakeshkumar Shah - 40226585
+
+
+
+Practical 1 :
+(defun swap (lst)
+  (cond ((null lst) '()) ; It checks  does the list is empty?
+    ((null (cdr lst)) (cons (car lst) nil)) ;Recursion till null value
+    ((cons (car (cdr lst)) (cons (car lst) (swap (cdr (cdr lst)))))) ; swapping of two element will take place
+  )
+)
+
+
+
+Practical 2 :
+
+(defun compress (list) 
+	(cond
+		((null list) nil)  ; It checks does the list is empty?
+		((null (cdr list)) list) : It will check second element is null or not.
+		((eql (car list) (car (cdr list))) ; It will check both the list are same or not.
+		(compress (cdr list))) ; Recursion of list take place
+	(t (cons (car list) (compress (cdr list)))) ;compression of list take place.
+	)
+)
+
+Practical 3 : 
+
+(defun pairs (lst1 lst2)
+	(cond ((null lst1) nil) ; It will check whether list 1 is empty?
+	((null lst2) nil) ; It will check whether list 1 is empty? 
+	((/= (length lst1) (length lst2)) nil)  ; It will compare lenght of both list and it must match.
+	(t(cons (list (car lst1) (car lst2)) (pairs (cdr lst1)(cdr lst2)))) ; pairing of list take place using car and cdr method.
+	)
+)
+
+Practical 4 :
+
+(defun dist (n lst1)
+	(cond ((null lst1) nil) ; It will check whether list is empty or not.
+	(t(cons (list n (car lst1)) (dist n (cdr lst1)))) ;Pairing of list take place.
+	)
+)
+
+
+Practical 5 :
+
+(defun diff (lt1 lt2)
+  (cond
+       ((not (and (listp lt1) (listp lt2))) nil) 		;It will check whether list1 and list2 are list or not
+       ((or (null lt1) (null lt2)) nil) 			;It will check whether list1 and list2 are null or not
+       ((not (= (length lt1) (length lt2))) nil) 		;It will check whether lenght of list1 and list2 are equal or not
+
+       ;; Otherwise
+       (t (let
+         ((d (- (car lt1) (car lt2)))) 			;It will take list1 and list2 head difference and store in variable "d"
+         (cons (* d d d) (diff (cdr lt1) (cdr lt2)))))))
+
+
+Practical 6 :
+
+(defun  lt(list)
+    (cond ((atom list) nil) ; It will check whether there is an atom present or not. if true then NIL.
+  (if (listp list)
+      (mapcan 'lt list) ; It will add element with same index
+      (list list))))
+
+(defun List-to-set (list)
+    (delete-duplicates (lt list)))  ; This will remove all the duplicates values.
+
+
+PRactical 7 :
+
+(defun filter (lst num)
+	(cond 	( 
+		(or (not (listp lst) ) 				;Check  the first argument is list or not, return NIL if it is not list
+		    ( null lst ) 				;Return NIL if list is empty or null.
+		    (not (atom num) )				;If second argument is not an element Return NIL 
+		    (not(and (plusp num) (integerp num)) ) 	;Check whether the element is a integer greater than 0, if not return NIL
+                )nil
+	      	)
+		(t
+ 		(if(> (car lst) num) 				;Check if first agrument of the list is greater than the element
+                    ( cons (car lst)  (filter (cdr lst) num ) )	;Add head of the list to new list and call recursively on tail of the list
+		    (filter (cdr lst) num )			;Recursion on tail of the list
+		)
+		)
+	)
+)   
+
+
+
+

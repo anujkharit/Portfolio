@@ -1,0 +1,66 @@
+Assigment Group : Anuj Rajesh Kharit - 40228592 and Joyal Rakeshkumar Shah - 40226585
+
+Output in excel File : 
+
+.headers on
+.mode csv
+.schema
+select * fom jobs;
+select * from employee;
+select * from freelancer;
+select * from company;
+select * from person;
+.output stout
+
+Answer 1 : Query =  select B.name  from company A  join person B on A.sin=B.sin where company_name = 'TCS';
+Anuj kharit
+Jay jain
+sanjay Dutt
+Salaman Khan
+Dixit Jain
+bhargav suthar
+maulik patel
+yatin ladani
+hitesh purohit
+shivani vakil
+rohit yagnik
+suresh rana
+dev shah
+prakash dhoni
+virat kholi
+jasprit bumrah
+yash vaghela
+saurav shukla
+krunal jani
+dhara desai
+faf duplesis
+
+
+Answer 2 :  select C.name, B.specialization  from company A  join freelancer B on A.sin=B.sin join person C on A.sin=C.sin  where company_name = 'TCS';
+Salaman Khan|Software Engineer
+Dixit Jain|UI/UX desginer
+virat kholi|Sr. project manager
+jasprit bumrah|Scrum Master
+yash vaghela|ETL Tester
+saurav shukla|API Tester
+krunal jani|Web Desginer
+dhara desai|Python Developer
+faf duplesis|C++ Developer
+
+
+Answer 3 :  select B.name from freelancer A join person B on A.sin=B.sin join job C on A.sin=C.sin where c.payrate > 19;
+madhuri dixit
+Salaman Khan
+Yashpal Chauhan
+virat kholi
+jasprit bumrah
+saurav shukla
+parthiv tivari
+krunal jani
+chintan raval
+abhishek ramanandi
+
+
+
+Answer 4 : Select A.name , C.salary from person A join company B on A.sin=B.sin join  employee C on A.sin=C.sin  where company_name='TCS' and desgination='manager';
+Anuj kharit|15.25

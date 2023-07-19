@@ -1,0 +1,113 @@
+add atleast 15 data for tata_consultancy_data & 5-7 for wipro in below format.
+
+
+name(employee,anuj_kharit).
+sin(employee,956-859-456).
+works_in(anuj_kharit,tata_consultancy_services).
+
+name(employee, yash_jain).
+sin(employee,458-856-256).
+works_in(yash_jain,wipro).
+
+name(employee,joyal_shah).
+sin(employee,256-663-784).
+works_in(joyal_shah,tata_consultancy_services).
+
+name(employee,akshay_kumar).
+sin(employee,741-523-665).
+works_in(akshay_kumar,wipro).
+
+
+name(employee,sanjay_dutt).
+sin(employee,789-412-123).
+works_in(sanjay_dutt,tata_consultancy_services).
+
+name(employee,yashpal_chauhan).
+sin(employee,235-647-432).
+works_in(yashpal_chauhan,wipro).
+
+name(employee,dixit_jain).
+sin(employee,234-568-743).
+works_in(dixit_jain,tata_consultancy_services).
+
+name(employee,rahul_kumar).
+sin(employee,552-789-115).
+works_in(rahul_kumar,tata_consultancy_services).
+
+name(employee,himalay_patel).
+sin(employee,778-969-556).
+works_in(himalay_patel,wipro).
+
+name(employee,hardik_mochi).
+sin(employee,149-854-627).
+works_in(hardik_mochi,tata_consultancy_services).
+
+name(employee,sumit_ghosh).
+sin(employee,732-348-999).
+works_in(sumit_ghosh,wipro).
+
+name(employee,rakesh_thakar).
+sin(employee,225-365-987).
+works_in(rakesh_thakar,tata_consultancy_services).
+
+employee_name_with_given_company_name(X):-works_in(X,tata_consultancy_services).
+------------------------------------------------------------------------------------------------------
+add atleast 15 data for wipro and 5-7 for tcs
+
+name_is(freelancer, jay_shah).
+works_in(jay_shah,tata_consultancy_services).
+specialization_is(jay_shah, data_scientist).
+payrate_freelancer(jay_shah,23.5).
+
+name_is(freelancer, raj_jain).
+works_in(raj_jain,tata_consultancy_services).
+specialization_is(raj_jain,web_designer).
+payrate_freelancer(raj_jain,18.9).
+
+name_is(freelancer,sohil_chauhan).
+works_in(sohil_chauhan,wipro).
+specialization_is(sohil_chauhan,java_developer).
+payrate_freelancer(sohil_chauhan,25.20).
+
+name_is(freelancer,rajesh_shah).
+works_in(rajesh_shah,wipro).
+specialization_is(rajesh_shah,front_end_developer).
+payrate_freelancer(rajesh,28.20).
+
+
+name_is(freelancer,rohan_jain).
+works_in(rohan_jain,wipro).
+specialization_is(rohan_jain,data_scientist).
+payrate_freelancer(rohan_jain,19.63).
+
+name_is(freelancer,banu_shah).
+works_in(banu_shah,wipro).
+specialization_is(banu_shah,web_developer).
+payrate_freelancer(banu_shah,16.70).
+
+name_is(company,tata_consultancy_services).
+location(company, remote).
+name_is(company,wipro).
+location(is,montreal).
+
+
+freelancer_employee_name_with_specialization(X,Z):-name_is(freelancer,X),works_in(X,wipro),specialization_is(X,Z).
+
+
+freelancer_payrate_higher_than_given_amount(X) :-  name_is(freelancer,X),payrate_freelancer(X,Y),Y>15.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+add 1 data for tcs for manager.
+
+manager(rohan_soni,wipro).
+manager_payrate(rohan_soni,23.15).
+
+manager_name_and_salary_for_given_company_name(X,Y):-manager(X,wipro),manager_payrate(X,Y).
+
+--------------------------------------------------------------------------------------------------------------------------
+pract - 2
+(defun remove-first-occurrence (lst elt)
+(cond ((null lst) nil)
+((equal (car lst) elt) (cdr lst))
+(t (cons (car lst)
+(remove-first-occurrence (cdr lst) elt)))))
+(write(remove-first-occurrence '(a a b b) '(s s)))

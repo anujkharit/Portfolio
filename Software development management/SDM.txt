@@ -1,0 +1,19 @@
+Requirement for user interface Screens: 
+
+guidelines and sugesstions : 
+
+Four primary care physicians : one nurse,
+four physical therapists, one registered nutritionist
+eightnurses and eight support staff.
+
+
+New system needs a modern information management
+needs.
+
+
+there will be seven people who will be using
+the system.
+
+ need to create software.
+
+Aid : Chat features
